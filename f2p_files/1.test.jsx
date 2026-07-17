@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React from "@testing-library/react"; // Ensure React is imported
-import Page from "./Page.jsx"; // Adjust path to your component
+import React from "react";
+import Page from "./Page.jsx";
 
 describe("Page Component", () => {
   test("submits the form successfully", async () => {
