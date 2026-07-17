@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from 'react'; // Ensure React is imported
 import Page from "./Page_turner.jsx"; // Adjust path to your component
 
 describe("Page Component", () => {
@@ -8,7 +9,7 @@ describe("Page Component", () => {
     const logSpy = jest.spyOn(console, "log").mockImplementation(() => {});
 
     // 2. Render the component (this replaces "creating an instance")
-    render(<Page />);
+	render(React.createElement(Page));
 
     // 3. Find the checkbox and button elements
     const checkbox = screen.getByLabelText(/some checkbox/i);
